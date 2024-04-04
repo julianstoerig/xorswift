@@ -53,18 +53,3 @@ float Rng::next() {
 void Rng::initialise() {
     state = 314159265;
 }
-
-
-
-
-int main() {
-        Rng rng;
-    while (true) {
-        
-        cout << rng.random_number << endl;
-        
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
-    }
-
-    return 0;
-}
