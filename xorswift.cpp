@@ -22,9 +22,10 @@ static constexpr State STATE = State {
 
 
 float normalise(const int& raw) {
-    /*take any integer between [INT_MIN; INT_MAX] and map them to [0; 1].*/
-    int preprocessed = raw < 0 ? raw : -raw;
-    return (double)(preprocessed - INT_MIN)/(double)INT_MAX;
+    /*take any integer between [INT_MIN; INT_MAX] and map them to ]0; 1].*/
+    int raw_positive = raw < 0 ? raw : -raw;
+    float normalised = (double)(raw_positive - INT_MIN)/(double)INT_MAX;
+    return normalised;
 }
 
 
