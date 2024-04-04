@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "chrono": "cpp",
+        "concepts": "cpp",
+        "string_view": "cpp",
+        "span": "cpp",
+        "thread": "cpp",
+        "climits": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp"
+    }
+}
