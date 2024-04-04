@@ -1,18 +1,18 @@
-#include "xorshift_rng"
+#include "xorswift.cpp"
 #include <iostream>
-#include <chrono>
-#include <thread>
 #include <climits>
 
 using namespace std;
-using namespace ranges;
+
 
 int main() {
-    for (auto n : views::iota(0,1000)) {
-        if xorshift() > 1 || xorshift() < 0 {
-            return 1;
-        }
-    }
+    State state = STATE;
+    float rnd;
+
+    while (true) {
+        tie(rnd, state) = xorswift(state);
+        cout << rnd << endl;
+    };
     
     return 0;
 };
