@@ -32,6 +32,7 @@ static constexpr State STATE = State {
 [[gnu::pure]] const State progress_state(const State& old_state, const int& u, const int& v, const int& w) noexcept {
     int result = old_state.state;
 
+    // known XOR-shift algorithm
     result ^= (result << u);
     result ^= (result >> v);
     result ^= (result << w);
